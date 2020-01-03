@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<i routerLink="/" class="fa fa-chevron-circle-left"  style="font-size:29px"></i>
+
+
+<div  class="form-popup" id="myForm" align="center">
+    <div class="container" align="center" style="margin-bottom:100px;">
+            <form >         
+              <div class="addemp">
+                <div class="col-25">
+                  <label for="fname">First Name</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="name"  name="name" placeholder="Your name..">
+                </div>
+              </div>
+              <div class="addemp">
+                <div class="col-25">
+                  <label for="lname">Last Name</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="lastname" name="lastname"  placeholder="Your last name..">
+                </div>
+              </div>
+              <!--
+              <div class="addemp">
+                <div class="col-25">
+                  <label for="lname">ID</label>
+                </div>
+                <div class="col-75">
+                  <input type="number" id="id" name="id" [(ngModel)]="id"  placeholder="Your id..">
+                </div>
+              </div>
+            -->
+      
+          
+              <div align="right" class="addemp">
+                    <button  style="margin:20px; margin-left:50px;" class="open-button" (click)="addEmployee()" >Add</button>
+                  
+              </div>
+            </form>
+          </div>
+          <p style="font-size:20px;">Takes a few seconds after submisson.</p>
+</div>
+
+
+
+
+
+
+<router-outlet></router-outlet>

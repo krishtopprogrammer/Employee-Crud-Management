@@ -1,0 +1,196 @@
+            <div class="table" style="text-align:left;width:500px;" align="center" >
+                <h1>
+                    {{ title }}
+                </h1>
+
+                <link href="//code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet">
+                <script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+         
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                
+
+
+
+                <ion-row class="data"  class="row" style="border-bottom: groove; ">
+
+                <ion-col col-4 align="left" >                                                                                                                                                                                  
+                    <ion-label>ID</ion-label>
+                    
+
+
+                        
+                    
+                </ion-col>
+            
+
+                <ion-col col-4  align="left">
+                    <ion-label >FIRSTNAME</ion-label>
+                </ion-col>
+
+                <ion-col col-4  align="left" > 
+                    <ion-label>LASTNAME</ion-label>
+                </ion-col>
+
+            
+            
+                
+                
+                <ion-col col-4 align="left" >                                                                                                                                                                                  
+                        <ion-label>ACTION</ion-label>
+                        
+    
+    
+                            
+                        
+                    </ion-col>
+                
+                    
+
+            
+                    
+                </ion-row>
+
+                
+
+                <ion-row *ngFor="let employee of jsonData; let i = index" class="hi">
+                
+                        
+                    
+                <ion-col col-4 style=" border: solid 1px gray;   padding: 2px 4px; border-radius: 3px; ">
+                    
+                    <ion-label >{{employee.id}}</ion-label>
+                    
+            
+                    
+                </ion-col>
+                
+
+                
+                
+                <ion-col col-4 style=" border: solid 1px gray;  border-radius: 3px;  padding: 2px 4px; ">
+                    <ion-label>{{employee.name}}</ion-label>
+                </ion-col>
+
+                
+                <ion-col  style=" border: solid 1px gray; border-radius: 3px;   padding: 2px 4px; "> 
+                        
+                    <ion-label>{{employee.lastname}}</ion-label>
+
+                </ion-col>
+
+                <ion-col col-4 style=" border: solid 1px gray;   padding: 2px 4px; border-radius: 3px; ">
+                    
+                                
+                     
+                        <i style="font-size: 21px; font-style: italic; " (click)="deleteEmployee(employee.id)"  class="fa fa-trash"></i>
+                              <i class="fa fa-edit" style="font-size:21px; margin-left:15px;" [routerLink]="['/edit', employee.id]" ></i>
+                                
+                    </ion-col>
+                
+                
+                </ion-row>
+                <button style= "width:500px;" routerLink="/create" class="open-button" ><p class="text">Add</p></button>     
+                <div  class="form-popup" id="myForm" align="center">
+                        <div class="container" id="container" align="center" style="margin-bottom:100px;">
+                                <form >
+                                  <div class="addemp">
+                                    <div class="col-25">
+                                      <label for="fname">First Name</label>
+                                    </div>
+                                    <div class="col-75">
+                                      <input autocomplete="off" type="text" id="name"  name="name"  placeholder="New name..">
+                                    </div>
+                                  </div>
+                                  <div class="addemp">
+                                    <div class="col-25">
+                                      <label for="lname">Last Name</label>
+                                    </div>
+                                    <div class="col-75">
+                                      <input autocomplete="off" type="text" id="lastname" name="lastname"   placeholder="New last name..">
+                                    </div>
+                                  </div>
+                          
+                              
+                                  <div align="right" class="addemp">
+                                <button class="open-button" (click)="closeEditForm()"><i  (click)="closeEditForm()" class="fa fa-arrow-up" style="font-size:20px; bottom:10px;"></i></button>        <button style="margin:20px; margin-left:50px;" class="open-button"> Apply </button>
+                                  </div>
+                                </form>
+                              </div>
+                              
+                    </div>
+
+
+
+
+
+
+
+        <ion-row class="data"  class="row" style="border-bottom: groove; Position:relative;  margin-left:560px; top:-188px;">
+                            
+        <ion-col col-4 align="center" >                                                                                                                                                                                  
+            <ion-label>EMPLOYEE MANAGMENT</ion-label>
+                                 
+        </ion-col>
+                            
+
+<button class="accordion" style="border-bottom: groove gray; border-top: groove gray;">How To Create Employee</button>
+<div class="panel" style="background-color:lightblue; border-bottom: groove gray;">
+  <p style="color:black;">Click on the add button below the table. Once clicked, it will prompt you to another page. Then fill the form with your employees new name and lastname, the id is automatically created to match the next number. If the text bar is left fully blank, a blank row will be created, so make sure to fill in the form. Once you click the add button, the page will reload to save data. Then click the back button. </p>
+</div>
+
+<button class="accordion" style="border-bottom: groove gray;">How To Update Employee</button>
+<div class="panel" style="background-color:lightblue; border-bottom: groove gray;">
+  <p style="color:black;">Click the pencil icon, then it will prompt you to another page. Type your new details and hit submit. Then go back and you shall see your update.</p>
+</div>
+
+<button class="accordion" style="border-bottom: groove gray;">How to Delete Employee</button>
+<div class="panel" style="background-color:lightblue; border-bottom: groove gray;">
+  <p style="color:black;">Simply click the trash icon on your desired row. There will be a prompt asking for a confirmation. If you select yes, the page will reload to save changes.</p>
+
+
+
+                
+                
+                
+
+
+
+     
+                    
+                    
+                    
+                    
+
+
+                    
+            
+                    
+                        
+                
+
+            
+
+
+            
+             
+
+           
+   
+  
+ 
+
+
+               
+
+  
+
+
+
+
+
+
+
+
+
+
+
